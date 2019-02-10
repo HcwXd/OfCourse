@@ -15,7 +15,7 @@ async function createCourse(courseInfo) {
 
 async function getCourseInfo(courseId) {
 
-  const sql = 'select c.courseName, c.provider as courseProvider, \
+  const sql = 'select c.courseName, c.courseProvider, \
               (select count(*) from review r where r.courseId = c.courseId) as courseReviewCount, \
               (select avg(r.score) from review r where r.courseId = c.courseId) as courseAvgScore \
               from course c \
@@ -26,7 +26,6 @@ async function getCourseInfo(courseId) {
   return result[0];
 }
 
-/*
 createCourse({
   categoryId: 1,
   courseName: "software engineering",
@@ -34,9 +33,8 @@ createCourse({
   duration: '2hr',
   language: 'english',
   des: 'hello',
-  provider: 'coursera',
+  courseProvider: 'coursera',
 })
-*/
 
 module.exports = {
   createCourse,
