@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>OfCourse - Course</title>
+    <title>OfCourse - SearchResult</title>
 
     <link rel="stylesheet" href="/courseSearchResult/css/style.css" />
     <link rel="stylesheet" href="/nav/css/style.css" />
@@ -10,75 +10,37 @@
 
   <body>
     <%- include('components/nav') %>
-    <div class="course_wrap">
-      <div class="title_wrap">JavaScript: Understanding the Weird Parts</div>
-      <div class="course_info_wrap">
-        <div class="course_info_item course_average_score">4.5 ☆</div>
-        <div class="course_info_item course_reviews_count">512 Reviews</div>
-        <div class="course_info_item course_provider">Udemy</div>
-      </div>
-    </div>
-    <div class="review_info_wrap">
-      <div class="review_summary_wrap">
-        <div class="review_summary_title">Summary</div>
-        <div class="review_summary_info">
-          <div class="review_summary_score_distribution_wrap">
-            <div class="score_distribution_item">
-              <div class="distribution_score" data-score="5">5 ☆</div>
-              <div class="distribution_count_bar_wrap">
-                <div class="distribution_count_bar"></div>
-              </div>
-            </div>
-            <div class="score_distribution_item">
-              <div class="distribution_score" data-score="4">4 ☆</div>
-              <div class="distribution_count_bar_wrap">
-                <div class="distribution_count_bar"></div>
-              </div>
-            </div>
-            <div class="score_distribution_item">
-              <div class="distribution_score" data-score="3">3 ☆</div>
-              <div class="distribution_count_bar_wrap">
-                <div class="distribution_count_bar"></div>
-              </div>
-            </div>
-            <div class="score_distribution_item">
-              <div class="distribution_score" data-score="2">2 ☆</div>
-              <div class="distribution_count_bar_wrap">
-                <div class="distribution_count_bar"></div>
-              </div>
-            </div>
-            <div class="score_distribution_item">
-              <div class="distribution_score" data-score="1">1 ☆</div>
-              <div class="distribution_count_bar_wrap">
-                <div class="distribution_count_bar"></div>
-              </div>
-            </div>
-          </div>
-          <div class="review_summary_overview_wrap">
-            <div class="review_summary_overview">
-              <div class="review_summary_avg_score">4.4</div>
-              <div class="review_summary_total_count">(91)</div>
-            </div>
-          </div>
+    <div class="container">
+      <div class="filter_bar_wrap">
+        <div class="filter_btn score_filter_btn">
+          Score > <input type="text" class="filter_input score_filter_input" value="3.0" />
+        </div>
+        <div class="filter_btn review_count_filter_btn">
+          Reviews >
+          <input type="text" class="filter_input review_count_filter_input" value="100" />
         </div>
       </div>
-      <div class="review_wrap">
-        <div class="review_list">
-          <div class="review_item">
-            <div class="user_info_wrap">
-              <img
-                class="user_avatar"
-                src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg"
-              />
-              <div class="user_info">
-                <div class="user_name">Horseman Bojack</div>
-                <div class="user_review_count">34 Reviews</div>
+      <div class="search_result_wrap">
+        <div class="search_result_list">
+          <div class="search_result_item">
+            <img
+              src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg"
+              class="course_image"
+            />
+            <div class="course_meta">
+              <div class="course_title">JavaScript: Understanding the Weird Parts</div>
+              <div class="course_stats">
+                <div class="course_avg_score">3.5 ☆</div>
+                <div class="course_review_count">512 Reviews</div>
               </div>
             </div>
-            <div class="user_review_wrap">
-              <div class="review_stats">
+            <div class="course_single_review">
+              <div class="user_info">
+                <img
+                src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg""
+                class="user_avatar">
+                <div class="user_name">Horseman Bojack</div>
                 <div class="review_score">3 ☆</div>
-                <div class="review_date">08/2016</div>
               </div>
               <div class="review_text">
                 This place is definitely so nice and such an amazing place for any type of event,
@@ -93,21 +55,25 @@
               </div>
             </div>
           </div>
-          <div class="review_item">
-            <div class="user_info_wrap">
-              <img
-                class="user_avatar"
-                src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg"
-              />
-              <div class="user_info">
-                <div class="user_name">Horseman Bojack</div>
-                <div class="user_review_count">34 Reviews</div>
+          <div class="search_result_item">
+            <img
+              src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg"
+              class="course_image"
+            />
+            <div class="course_meta">
+              <div class="course_title">JavaScript: Understanding the Weird Parts</div>
+              <div class="course_stats">
+                <div class="course_avg_score">3.5 ☆</div>
+                <div class="course_review_count">512 Reviews</div>
               </div>
             </div>
-            <div class="user_review_wrap">
-              <div class="review_stats">
+            <div class="course_single_review">
+              <div class="user_info">
+                <img
+                src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg""
+                class="user_avatar">
+                <div class="user_name">Horseman Bojack</div>
                 <div class="review_score">3 ☆</div>
-                <div class="review_date">08/2016</div>
               </div>
               <div class="review_text">
                 This place is definitely so nice and such an amazing place for any type of event,
@@ -122,21 +88,25 @@
               </div>
             </div>
           </div>
-          <div class="review_item">
-            <div class="user_info_wrap">
-              <img
-                class="user_avatar"
-                src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg"
-              />
-              <div class="user_info">
-                <div class="user_name">Horseman Bojack</div>
-                <div class="user_review_count">34 Reviews</div>
+          <div class="search_result_item">
+            <img
+              src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg"
+              class="course_image"
+            />
+            <div class="course_meta">
+              <div class="course_title">JavaScript: Understanding the Weird Parts</div>
+              <div class="course_stats">
+                <div class="course_avg_score">3.5 ☆</div>
+                <div class="course_review_count">512 Reviews</div>
               </div>
             </div>
-            <div class="user_review_wrap">
-              <div class="review_stats">
+            <div class="course_single_review">
+              <div class="user_info">
+                <img
+                src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg""
+                class="user_avatar">
+                <div class="user_name">Horseman Bojack</div>
                 <div class="review_score">3 ☆</div>
-                <div class="review_date">08/2016</div>
               </div>
               <div class="review_text">
                 This place is definitely so nice and such an amazing place for any type of event,
@@ -151,21 +121,25 @@
               </div>
             </div>
           </div>
-          <div class="review_item">
-            <div class="user_info_wrap">
-              <img
-                class="user_avatar"
-                src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg"
-              />
-              <div class="user_info">
-                <div class="user_name">Horseman Bojack</div>
-                <div class="user_review_count">34 Reviews</div>
+          <div class="search_result_item">
+            <img
+              src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg"
+              class="course_image"
+            />
+            <div class="course_meta">
+              <div class="course_title">JavaScript: Understanding the Weird Parts</div>
+              <div class="course_stats">
+                <div class="course_avg_score">3.5 ☆</div>
+                <div class="course_review_count">512 Reviews</div>
               </div>
             </div>
-            <div class="user_review_wrap">
-              <div class="review_stats">
+            <div class="course_single_review">
+              <div class="user_info">
+                <img
+                src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg""
+                class="user_avatar">
+                <div class="user_name">Horseman Bojack</div>
                 <div class="review_score">3 ☆</div>
-                <div class="review_date">08/2016</div>
               </div>
               <div class="review_text">
                 This place is definitely so nice and such an amazing place for any type of event,
