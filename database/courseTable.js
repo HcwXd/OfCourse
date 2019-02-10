@@ -1,8 +1,4 @@
-const {
-  db,
-  getData,
-  applyQuery
-} = require('./DB');
+const { db, getData, applyQuery } = require('./DB');
 const mysql = require('mysql');
 
 async function createCourse(courseInfo) {
@@ -14,8 +10,8 @@ async function createCourse(courseInfo) {
 }
 
 async function getCourseInfo(courseId) {
-
-  const sql = 'select c.courseName, c.courseProvider, \
+  const sql =
+    'select c.courseName, c.courseProvider, \
               (select count(*) from review r where r.courseId = c.courseId) as courseReviewCount, \
               (select avg(r.score) from review r where r.courseId = c.courseId) as courseAvgScore \
               from course c \

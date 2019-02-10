@@ -56,28 +56,35 @@ function lightenStar() {
 document.querySelector('.submit_btn').addEventListener('click', () => {
   let payload = {};
   let courseInfo = {};
-  payload.url = document.querySelector('.course_url_input').value;
-  payload.name = document.querySelector('.course_name_input').value;
-  payload.category = document.querySelector('.course_category_input').value;
-  payload.language = document.querySelector('.course_language_input').value;
-  payload.level = document.querySelector('.course_level_input').value;
-  payload.score = document.querySelectorAll('.active').length;
-  payload.text = document.querySelector('.review').value;
-  payload.date = document.querySelector('.course_name_input').value;
+  let reviewInfo = {};
+
+  courseInfo.url = document.querySelector('.course_url_input').value;
+  courseInfo.name = document.querySelector('.course_name_input').value;
+  courseInfo.category = document.querySelector('.course_category_input').value;
+  courseInfo.language = document.querySelector('.course_language_input').value;
+  courseInfo.level = document.querySelector('.course_level_input').value;
+  courseInfo.courseId = courseIdState;
+  reviewInfo.score = document.querySelectorAll('.active').length;
+  reviewInfo.text = document.querySelector('.review').value;
+  reviewInfo.date = document.querySelector('.course_name_input').value;
+  payload.courseInfo = courseInfo;
+  payload.reviewInfo = reviewInfo;
   console.log(payload);
 
-  const postPublishUrl = '/publish/1';
+  const postPublishUrl = '/publish/newReview';
   fetch(postPublishUrl, {
     method: 'POST',
-    mode: 'no-cors',
+    mode: 'cors',
     headers: new Headers({
       'Content-Type': 'application/json',
     }),
-    body: JSON.stringify(data),
+    body: JSON.stringify(payload),
   })
     .then((res) => res.json())
     .catch((error) => console.error('Error:', error))
     .then((response) => {
+      console.log(response);
+
       window.location = '/courses/' + response.courseId;
     });
 });
