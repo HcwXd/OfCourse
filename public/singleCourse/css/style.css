@@ -1,5 +1,4 @@
 * {
-  border: 1px solid #000;
   box-sizing: border-box;
   letter-spacing: 2px; }
 
@@ -28,7 +27,7 @@
   background-color: #f2f2f2; }
   .review_info_wrap .review_summary_wrap {
     width: 30%;
-    padding-top: 55px;
+    padding-top: 35px;
     padding-left: 65px; }
     .review_info_wrap .review_summary_wrap .review_summary_title {
       font-size: 45px; }
@@ -67,9 +66,19 @@
     .review_info_wrap .review_wrap .review_list {
       width: 100%; }
       .review_info_wrap .review_wrap .review_list .review_item {
-        display: flex; }
+        display: flex;
+        margin-bottom: 25px; }
         .review_info_wrap .review_wrap .review_list .review_item .user_info_wrap .user_avatar {
-          width: 50px;
-          height: 50px; }
+          width: 200px;
+          height: 200px; }
+        .review_info_wrap .review_wrap .review_list .review_item .user_info_wrap .user_info {
+          font-size: 15px; }
+        .review_info_wrap .review_wrap .review_list .review_item .user_review_wrap .review_stats {
+          display: flex;
+          justify-content: space-between;
+          padding-left: 15px; }
+        .review_info_wrap .review_wrap .review_list .review_item .user_review_wrap .review_text {
+          text-align: justify;
+          padding: 15px; }
 
 /*# sourceMappingURL=style.css.map */
