@@ -13,23 +13,33 @@ $bg_deep_black: rgb(15, 15, 15)
 $bg_black: rgb(26, 26, 26)
 $bg_grey: rgb(40, 40, 40)
 $txt_white: rgb(190, 190, 190)
+input
+    outline: none
 .container
     width: 100%
     top: 55px
     position: relative
     .filter_bar_wrap
+        padding: 5px 0px
         display: flex
+        background-color: $txt_white
+        color: black
         .filter_btn
             cursor: pointer
             border: 1px solid #000
             border-radius: 5px
             padding: 5px
+            padding-left: 20px
             font-size: 15px
             margin: 15px
         .filter_input
             font-size: 15px
             background: transparent
             border: 0px solid #000
+            &:focus
+                border-bottom: 1px solid rgba(#000, 0.5)
+        .filter_btn-active
+            background: skyblue
         .score_filter_btn
             .score_filter_input
                 width: 45px

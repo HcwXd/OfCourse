@@ -88,9 +88,12 @@ textarea {
       flex-direction: column; }
       .review_info_wrap .user_wrap .user_text_wrap .user_name {
         margin-left: 20px; }
-      .review_info_wrap .user_wrap .user_text_wrap .star {
+      .review_info_wrap .user_wrap .user_text_wrap .star_list {
+        display: flex;
         margin-left: 20px;
         font-size: 25px; }
+        .review_info_wrap .user_wrap .user_text_wrap .star_list .active {
+          color: darkorange; }
   .review_info_wrap .review {
     margin-left: 50px;
     margin-right: 50px;

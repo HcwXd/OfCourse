@@ -6,7 +6,7 @@ const reviewTable = require('../../database/reviewTable');
 const courseTable = require('../../database/courseTable');
 
 
-router.get('/:publishId/', function(req, res) {
+router.get('/:userId/', function(req, res) {
   res.render('publish');
 });
 
