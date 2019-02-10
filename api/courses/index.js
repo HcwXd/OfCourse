@@ -15,9 +15,17 @@ router.get(
   '/:courseId/users/:userId/reviews/:reviewId/reviewInfo',
   require('./controller/getReviewInfo')
 );
+
+router.get(
+  '/:courseId/users/:userId/reviews/:reviewId/reviewsInfo',
+  require('./controller/getReviewsInfo')
+);
 router.get(
   '/:courseId/users/:userId/reviews/:reviewId/courseInfo',
   require('./controller/getCourseInfo')
 );
+
+
+
 
 module.exports = router;
