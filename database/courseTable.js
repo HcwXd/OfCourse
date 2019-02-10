@@ -15,7 +15,7 @@ async function createCourse(courseInfo) {
 
 async function getCourseInfo(courseId) {
 
-  const sql = 'select c.courseName, c.provider \
+  const sql = 'select c.courseName, c.provider, \
               (select count(*) from review r where r.courseId = c.courseId) as courseReviewCount, \
               (select avg(r.score) from review r where r.courseId = c.courseId) as courseAvgScore \
               from course c \

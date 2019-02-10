@@ -27,6 +27,7 @@ async function getReview(reviewInfo) {
   return result[0];
 }
 
+/*
 createReview({
   userId: 1,
   courseId: 1,
@@ -34,6 +35,7 @@ createReview({
   score: 3,
   text: "good",
 })
+*/
 
 module.exports = {
   createReview,
