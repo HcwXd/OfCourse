@@ -1,0 +1,83 @@
+*
+    // border: 1px solid #000
+    box-sizing: border-box
+    letter-spacing: 2px
+
+$txt_black: rgb(60, 60, 60)
+$bg_white: rgb(242, 242, 242)
+$bg_orange: #FF6700
+$bg_blue: #0A2463
+$noti_green: hsla(120, 100%, 50%, 0.3)
+
+$bg_deep_black: rgb(15, 15, 15)
+$bg_black: rgb(26, 26, 26)
+$bg_grey: rgb(40, 40, 40)
+$txt_white: rgb(190, 190, 190)
+.container
+    width: 100%
+    top: 55px
+    position: relative
+    .user_info_wrap
+        color: white
+        background-color: $bg_grey
+        width: 100%
+        display: flex
+        padding: 50px
+        .user_avatar
+            height: 250px
+            width: 250px
+        .user_info
+            margin-left: 50px
+            .user_name
+                font-size: 35px
+            .user_bio
+                margin-top: 25px
+                font-size: 25px
+    .review_wrap
+        width: 100%
+        display: flex
+        padding: 50px
+        .review_summary_wrap
+            width: 30%
+            padding-left: 65px
+            .review_summary_title
+                font-size: 45px
+            .review_summary_info
+                margin-top: 15px
+                display: flex
+                .review_summary_score_distribution_wrap
+                    width: 70%
+                    .score_distribution_item
+                        display: flex
+                        align-items: center
+                        .distribution_score
+                            font-size: 25px
+                            width: 30%
+                        .distribution_count_bar_wrap                 
+                            width: 70%
+                            .distribution_count_bar
+                                width: 100%
+                                background-color: orange
+                                height: 25px
+        .review_list_wrap
+            width: 70%
+            .review_item
+                display: flex
+                border-bottom: 1px solid #000
+                margin-bottom: 15px
+                .review_image
+                    height: 100px
+                    width: 100px
+                .review_info
+                    .review_title
+                        padding: 15px
+                        font-size: 20px
+                    .review_stats
+                        padding: 15px
+                        display: flex
+                        .review_score
+                            margin-right: 15px
+                        .review_date
+                    .review_text
+                        padding: 15px
+                        text-align: justify
