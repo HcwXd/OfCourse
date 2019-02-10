@@ -1,3 +1,11 @@
+document
+  .querySelectorAll('.filter_btn')
+  .forEach((el) => el.addEventListener('click', toggleActive));
+
+function toggleActive() {
+  this.classList.toggle('filter_btn-active');
+}
+
 const url = window.location.pathname + '/courseInfo';
 console.log(url);
 
