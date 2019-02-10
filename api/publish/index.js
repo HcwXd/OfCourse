@@ -3,7 +3,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/:publishId/', function(req, res) {
+router.get('/:userId/', function(req, res) {
   res.render('publish');
 });
 
