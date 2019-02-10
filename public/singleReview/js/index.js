@@ -31,8 +31,8 @@ fetch(window.location.pathname + '/reviewInfo', {
 
     document.querySelector('.user_avatar').src = userAvatar;
     document.querySelector('.user_name').innerHTML = userName;
-    document.querySelector('.user_reviews_count').innerHTML = userReviewCount;
-    document.querySelector('.review_score').innerHTML = reviewScore;
+    document.querySelector('.user_reviews_count').innerHTML = userReviewCount + ' Reviews';
+    document.querySelector('.review_score').innerHTML = reviewScore + ' ☆';
     document.querySelector('.review_date').innerHTML = reviewDate;
     document.querySelector('.review_text').innerHTML = reviewText;
   });
