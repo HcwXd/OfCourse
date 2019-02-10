@@ -44,7 +44,7 @@ function applyQuery(query) {
           return;
         }
         console.log('success');
-        //console.log(result);
+        console.log(result);
         resolve(result);
       });
     } catch (error) {

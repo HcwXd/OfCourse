@@ -36,16 +36,22 @@ async function getReviews(courseId) {
   const result = await getData(query);
   return result;
 }
-
+/*
 createReview({
   userId: 1,
   courseId: 1,
   collectionId: 0,
   score: 3,
-  text: "good",
+  text: 'CREATE TABLE user (userId int AUTO_INCREMENT, primary key (userId), userName VARCHAR(255), avatar VARCHAR(255)); \
+         **review**: \
+         CREATE TABLE review (reviewId int AUTO_INCREMENT, primary key (reviewId), userId int, courseId int, collectionId int, score int, text VARCHAR(1023), date VARCHAR(30)); \
+         **collection**: \
+         CREATE TABLE collection (collectionId int AUTO_INCREMENT, primary key (collectionId), userId int, title VARCHAR(31), head VARCHAR(4095), end VARCHAR(4095), date VARCHAR(15)); \
+         **course**: \
+         CREATE TABLE course (courseId int AUTO_INCREMENT, primary key(courseId), categoryId int, courseName VARCHAR(31), level VARCHAR(15), duration VARCHAR(15), language VARCHAR(15), des VARCHAR(127), courseProvider varchar(255));',
   date: new Date(),
 })
-
+*/
 
 module.exports = {
   createReview,

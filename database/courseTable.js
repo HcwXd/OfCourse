@@ -26,17 +26,27 @@ async function getCourseInfo(courseId) {
   return result[0];
 }
 
+async function getURLInfo(courseURL) {
+  const sql = 'select * from course where url = ?';
+  const insert = [courseURL];
+  const query = mysql.format(sql, insert);
+  const result = await getData(query);
+  return result[0];
+}
+
+/*
 createCourse({
   categoryId: 1,
-  courseName: "software engineering",
-  level: 'easy',
+  courseName: "javascript",
+  level: 'hard',
   duration: '2hr',
-  language: 'english',
-  des: 'hello',
-  courseProvider: 'coursera',
-})
+  language: 'madarin',
+  des: 'cool',
+  courseProvider: 'udemy',
+})*/
 
 module.exports = {
   createCourse,
   getCourseInfo,
+  getURLInfo,
 };
