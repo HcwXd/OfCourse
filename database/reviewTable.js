@@ -13,13 +13,18 @@ async function createReview(reviewInfo) {
   return ret;
 }
 
-async function getReview(reviewId) {
-  const sql = 'SELECT r.*, u.userName, u.avatar FROM review r, user c \
-               WHERE r.reviewId = ? AND r.userId = c.userId';
-  const insert = [reviewId];
+async function getReview(reviewInfo) {
+  const reviewId = reviewInfo.reviewId;
+  const userId = reviewInfo.userId;
+  const sql = 'select u.avatar as userAvatar, u.userName, \
+               (select count(*) from review r where r.userId = 1) as userReviewCount, \
+               r.score as reviewScore, r.text as reviewText, r.date as reviewDate \
+               from user u, review r \
+               where u.userId = ? and r.reviewId = ?';
+  const insert = [userId, reviewId];
   const query = mysql.format(sql, insert);
   const result = await getData(query);
-  return result;
+  return result[0];
 }
 
 createReview({
