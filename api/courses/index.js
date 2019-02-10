@@ -12,8 +12,12 @@ router.get('/:courseId', function(req, res) {
 });
 
 router.get(
-  '/:courseId/users/:userId/reviews/:reviewId/info',
+  '/:courseId/users/:userId/reviews/:reviewId/reviewInfo',
   require('./controller/getReviewsInfo')
+);
+router.get(
+  '/:courseId/users/:userId/reviews/:reviewId/courseInfo',
+  require('./controller/getCourseInfo')
 );
 
 module.exports = router;
