@@ -13,7 +13,7 @@ router.get('/:courseId', function(req, res) {
 
 router.get(
   '/:courseId/users/:userId/reviews/:reviewId/reviewInfo',
-  require('./controller/getReviewsInfo')
+  require('./controller/getReviewInfo')
 );
 router.get(
   '/:courseId/users/:userId/reviews/:reviewId/courseInfo',
