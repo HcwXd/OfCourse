@@ -1,5 +1,5 @@
 *
-    border: 1px solid #000
+    // border: 1px solid #000
     box-sizing: border-box
     letter-spacing: 2px
 
@@ -41,7 +41,7 @@ $txt_white: rgb(190, 190, 190)
     background-color: $bg_white    
     .review_summary_wrap
         width: 30%
-        padding-top: 55px
+        padding-top: 35px
         padding-left: 65px
         .review_summary_title
             font-size: 45px
@@ -82,16 +82,23 @@ $txt_white: rgb(190, 190, 190)
             width: 100%
             .review_item
                 display: flex
+                margin-bottom: 25px
                 .user_info_wrap
                     .user_avatar
-                        width: 50px
-                        height: 50px
+                        width: 200px
+                        height: 200px
                     .user_info
+                        font-size: 15px
                         .user_name
                         .user_review_count
                 .user_review_wrap
                     .review_stats
+                        display: flex
+                        justify-content: space-between
+                        padding-left: 15px
                         .review_score
                         .review_date
                     .review_text
+                        text-align: justify
+                        padding: 15px
     
