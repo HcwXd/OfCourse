@@ -1,4 +1,5 @@
-fetch(window.location.pathname + '/courseInfo', {
+const courseInfoUrl = window.location.pathname.split('/users')[0] + '/courseInfo';
+fetch(courseInfoUrl, {
   method: 'GET',
   mode: 'no-cors',
   headers: new Headers({
@@ -16,7 +17,13 @@ fetch(window.location.pathname + '/courseInfo', {
     document.querySelector('.course_provider').innerHTML = courseProvider || '';
   });
 
-fetch(window.location.pathname + '/reviewInfo', {
+const reviewInfoUrl =
+  window.location.pathname.split('/users/')[0] +
+  '/reviews/' +
+  window.location.pathname.split('/reviews/')[1] +
+  '/reviewInfo';
+
+fetch(reviewInfoUrl, {
   method: 'GET',
   mode: 'no-cors',
   headers: new Headers({
