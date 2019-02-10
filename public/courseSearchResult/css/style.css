@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  letter-spacing: 2px; }
+
+.course_wrap {
+  margin-top: 55px;
+  color: white;
+  width: 100%;
+  display: block;
+  padding: 55px;
+  padding-left: 75px;
+  background-color: #282828; }
+  .course_wrap .title_wrap {
+    padding-bottom: 25px;
+    font-size: 45px; }
+  .course_wrap .course_info_wrap {
+    padding: 0px;
+    display: flex;
+    align-items: center; }
+    .course_wrap .course_info_wrap .course_info_item {
+      margin-right: 15px; }
+
+.review_info_wrap {
+  width: 100%;
+  display: flex;
+  position: relative;
+  background-color: #f2f2f2; }
+  .review_info_wrap .review_summary_wrap {
+    width: 30%;
+    padding-top: 35px;
+    padding-left: 65px; }
+    .review_info_wrap .review_summary_wrap .review_summary_title {
+      font-size: 45px; }
+    .review_info_wrap .review_summary_wrap .review_summary_info {
+      margin-top: 15px;
+      display: flex; }
+      .review_info_wrap .review_summary_wrap .review_summary_info .review_summary_score_distribution_wrap {
+        width: 70%; }
+        .review_info_wrap .review_summary_wrap .review_summary_info .review_summary_score_distribution_wrap .score_distribution_item {
+          display: flex;
+          align-items: center; }
+          .review_info_wrap .review_summary_wrap .review_summary_info .review_summary_score_distribution_wrap .score_distribution_item .distribution_score {
+            font-size: 25px;
+            width: 30%; }
+          .review_info_wrap .review_summary_wrap .review_summary_info .review_summary_score_distribution_wrap .score_distribution_item .distribution_count_bar_wrap {
+            width: 70%; }
+            .review_info_wrap .review_summary_wrap .review_summary_info .review_summary_score_distribution_wrap .score_distribution_item .distribution_count_bar_wrap .distribution_count_bar {
+              width: 100%;
+              background-color: orange;
+              height: 25px; }
+      .review_info_wrap .review_summary_wrap .review_summary_info .review_summary_overview_wrap {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+        .review_info_wrap .review_summary_wrap .review_summary_info .review_summary_overview_wrap .review_summary_overview {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          .review_info_wrap .review_summary_wrap .review_summary_info .review_summary_overview_wrap .review_summary_overview .review_summary_avg_score {
+            font-size: 55px; }
+  .review_info_wrap .review_wrap {
+    width: 70%;
+    padding: 30px; }
+    .review_info_wrap .review_wrap .review_list {
+      width: 100%; }
+      .review_info_wrap .review_wrap .review_list .review_item {
+        display: flex;
+        margin-bottom: 25px; }
+        .review_info_wrap .review_wrap .review_list .review_item .user_info_wrap .user_avatar {
+          width: 200px;
+          height: 200px; }
+        .review_info_wrap .review_wrap .review_list .review_item .user_info_wrap .user_info {
+          font-size: 15px; }
+        .review_info_wrap .review_wrap .review_list .review_item .user_review_wrap .review_stats {
+          display: flex;
+          justify-content: space-between;
+          padding-left: 15px; }
+        .review_info_wrap .review_wrap .review_list .review_item .user_review_wrap .review_text {
+          text-align: justify;
+          padding: 15px; }
+
+/*# sourceMappingURL=style.css.map */
