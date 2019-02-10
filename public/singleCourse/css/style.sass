@@ -1,0 +1,97 @@
+*
+    border: 1px solid #000
+    box-sizing: border-box
+    letter-spacing: 2px
+
+$txt_black: rgb(60, 60, 60)
+$bg_white: rgb(242, 242, 242)
+$bg_orange: #FF6700
+$bg_blue: #0A2463
+$noti_green: hsla(120, 100%, 50%, 0.3)
+
+$bg_deep_black: rgb(15, 15, 15)
+$bg_black: rgb(26, 26, 26)
+$bg_grey: rgb(40, 40, 40)
+$txt_white: rgb(190, 190, 190)
+
+.course_wrap
+    margin-top: 55px
+    color: white
+    width: 100%
+    display: block
+    padding: 55px
+    padding-left: 75px
+    background-color: $bg_grey
+    .title_wrap
+        padding-bottom: 25px
+        font-size: 45px
+    .course_info_wrap
+        padding: 0px
+        display: flex
+        align-items: center
+        .course_info_item
+            margin-right: 15px
+        .course_average_score
+        .course_reviews_count
+        .course_provider
+.review_info_wrap
+    width: 100%
+    display: flex
+    position: relative
+    background-color: $bg_white    
+    .review_summary_wrap
+        width: 30%
+        padding-top: 55px
+        padding-left: 65px
+        .review_summary_title
+            font-size: 45px
+        .review_summary_info
+            margin-top: 15px
+            display: flex
+            .review_summary_score_distribution_wrap
+                width: 70%
+                .score_distribution_item
+                    display: flex
+                    align-items: center
+                    .distribution_score
+                        font-size: 25px
+                        width: 30%
+                    .distribution_count_bar_wrap                 
+                        width: 70%
+                        .distribution_count_bar
+                            width: 100%
+                            background-color: orange
+                            height: 25px
+            .review_summary_overview_wrap
+                width: 30%
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: space-around
+                .review_summary_overview
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    .review_summary_avg_score
+                        font-size: 55px
+                    .review_summary_total_count
+    .review_wrap
+        width: 70%
+        padding: 30px
+        .review_list
+            width: 100%
+            .review_item
+                display: flex
+                .user_info_wrap
+                    .user_avatar
+                        width: 50px
+                        height: 50px
+                    .user_info
+                        .user_name
+                        .user_review_count
+                .user_review_wrap
+                    .review_stats
+                        .review_score
+                        .review_date
+                    .review_text
+    
