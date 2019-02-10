@@ -16,8 +16,10 @@ router.post('/newReview', async (req, res) => {
     const result = await courseTable.createCourse(req.body.courseInfo);
     req.body.reviewInfo.courseId = result.insertId;
   }
-  const resutl = await reviewTable.createReview(req.body.reviewInfo);
-  res.status(200).send(req.body.reviewInfo.courseId);
+  const result = await reviewTable.createReview(req.body.reviewInfo);
+  res.status(200).json({
+    courseId: req.body.reviewInfo.courseId
+  });
 });
 
 module.exports = router;
