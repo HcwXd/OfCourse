@@ -34,7 +34,7 @@ async function getURLInfo(courseURL) {
   return result[0];
 }
 
-/*
+
 createCourse({
   categoryId: 1,
   courseName: "javascript",
@@ -43,7 +43,7 @@ createCourse({
   language: 'madarin',
   des: 'cool',
   courseProvider: 'udemy',
-})*/
+})
 
 module.exports = {
   createCourse,
