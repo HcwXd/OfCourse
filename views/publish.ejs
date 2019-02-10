@@ -9,18 +9,42 @@
   </head>
 
   <body>
-      <%- include('components/nav') %>
+    <%- include('components/nav') %>
     <div class="course_wrap">
-      URL: <input class="url"></input> 
-      <button type="button">Enter</button></br>
-      <div class="course_info_wrap">
-        Class Name:<input class="class_name"></input></br> 
-        Category: <input class="category"></input></br>
-        Duration: <input class="duration"></input>
-        Language: <input class="language"></input>
-        Level: <input class="level"></input>
+      <div class="url_input_wrap">
+        <input type="text" class="course_url_input" placeholder="Please Enter Course Url Here" />
+        <div class="url_input_btn">Enter</div>
       </div>
-      <div class="class_avatar"></div>
+      <div class="course_info_wrap">
+        <img
+          src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg"
+          class="course_avatar"
+        />
+        <div class="info_input_wrap">
+          <div class="course_name_wrap">
+            Class Name: <input type="text" class="course_name_input" />
+          </div>
+          <div class="course_other_info_wrap">
+            Category:
+            <select name="course_catagory_input" class="info_input course_catagory_input">
+              <option value="WebDev"> WebDev </option>
+              <option value="ML"> MachineLearning </option>
+              <option value="Algorithm"> Algorithm </option>
+            </select>
+            Language:
+            <select name="course_language_input" class="info_input course_language_input">
+              <option value="En"> En </option>
+              <option value="Ch"> Ch </option>
+            </select>
+            Level:
+            <select name="course_level_input" class="info_input course_level_input">
+              <option value="Basic"> Basic </option>
+              <option value="Intermediate"> Intermediate </option>
+              <option value="Advanced"> Advanced </option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="review_info_wrap">
       <div class="user_wrap">
@@ -29,14 +53,14 @@
           src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg"
         />
         <div class="user_text_wrap">
-          <div class="user_name">Horseman Bojack, 34 Reviews</div>
+          <div class="user_name">Horseman Bojack</div>
           <div class="star">☆☆☆☆☆</div>
         </div>
       </div>
       <textarea type="text" class="review"></textarea>
       <div class="button_wrap">
-        <button type="button">Cancel</button>
-        <button type="button">Submit</button>
+        <div class="cancel_btn btn">Cancel</div>
+        <div class="submit_btn btn">Submit</div>
       </div>
     </div>
     <script src="/publish/js/index.js"></script>

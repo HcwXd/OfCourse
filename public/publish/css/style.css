@@ -2,6 +2,12 @@
   box-sizing: border-box;
   letter-spacing: 2px; }
 
+input {
+  outline: none; }
+
+textarea {
+  outline: none; }
+
 .course_wrap {
   margin-top: 55px;
   color: white;
@@ -10,19 +16,56 @@
   padding: 55px;
   padding-left: 75px;
   background-color: #282828; }
-  .course_wrap .url {
-    width: 500px; }
-  .course_wrap .course_info_wrap {
-    padding: 0px;
+  .course_wrap .url_input_wrap {
+    display: flex;
+    justify-content: center;
     align-items: center; }
-    .course_wrap .course_info_wrap .class_name {
-      width: 300px; }
-    .course_wrap .course_info_wrap .category {
-      width: 300px; }
-  .course_wrap .class_avatar {
-    width: 200px;
-    height: 200px;
-    border: 1px solid; }
+    .course_wrap .url_input_wrap .course_url_input {
+      width: 80%;
+      margin-right: 15px;
+      height: 45px;
+      padding: 10px;
+      background: #3c3c3c;
+      color: white; }
+    .course_wrap .url_input_wrap .url_input_btn {
+      background: #3c3c3c;
+      border-radius: 5px;
+      text-align: center;
+      padding: 15px;
+      border: 2px solid white;
+      cursor: pointer; }
+  .course_wrap .course_info_wrap {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .course_wrap .course_info_wrap .course_avatar {
+      height: 200px;
+      width: 200px;
+      margin-right: 15px; }
+    .course_wrap .course_info_wrap .info_input_wrap .course_name_wrap {
+      display: flex;
+      align-items: center;
+      width: 900px;
+      font-size: 15px;
+      padding: 15px; }
+      .course_wrap .course_info_wrap .info_input_wrap .course_name_wrap .course_name_input {
+        margin-left: 15px;
+        font-size: 15px;
+        width: 80%;
+        margin-right: 15px;
+        height: 45px;
+        padding: 10px;
+        background: #3c3c3c;
+        color: white; }
+    .course_wrap .course_info_wrap .info_input_wrap .course_other_info_wrap {
+      padding: 15px; }
+      .course_wrap .course_info_wrap .info_input_wrap .course_other_info_wrap .info_input {
+        color: white;
+        background: #3c3c3c;
+        padding: 15px;
+        font-size: 15px;
+        margin-right: 15px; }
 
 .review_info_wrap {
   width: 100%;
@@ -31,7 +74,7 @@
   position: relative;
   background-color: #f2f2f2; }
   .review_info_wrap .user_wrap {
-    width: 3000px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     padding: 30px;
@@ -59,6 +102,15 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-right: 60px; }
+    margin-right: 60px;
+    margin-top: 25px;
+    margin-bottom: 25px; }
+    .review_info_wrap .button_wrap .btn {
+      border-radius: 5px;
+      text-align: center;
+      padding: 15px;
+      border: 1px solid #282828;
+      cursor: pointer;
+      margin-left: 15px; }
 
 /*# sourceMappingURL=style.css.map */
