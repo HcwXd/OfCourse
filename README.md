@@ -21,6 +21,7 @@ OfCourse provides users a platform to write comments and rate any online courses
 2. ```cd OfCourse```
 3. ```npm install ```
 4. ```node app.js```
+5. ```localhost:3000/search/hack```
 
 ### How to use our website
 
