@@ -6,6 +6,15 @@ const {
 const mysql = require('mysql');
 
 async function createCourse(courseInfo) {
+  if (courseInfo.courseProvider == "coursera") {
+    courseInfo.url = 'https://cdn-images-1.medium.com/max/1600/1*STTQyckmI3KbGm29sqIxEA.png';
+  } else if (courseInfo.courseProvider == "udemy") {
+    courseInfo.url = 'https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg';
+  } else if (courseInfo.courseProvider == "edx") {
+    courseInfo.url = 'https://www.edx.org/sites/default/files/theme/edx-logo-header.png';
+  } else {
+    courseInfo.url = '';
+  }
   const sql = 'INSERT INTO course SET ?';
   const insert = courseInfo;
   const query = mysql.format(sql, insert);
@@ -34,7 +43,7 @@ async function getURLInfo(courseURL) {
   return result[0];
 }
 
-/*
+
 createCourse({
   categoryId: 1,
   courseName: "javascript",
@@ -42,8 +51,8 @@ createCourse({
   duration: '2hr',
   language: 'madarin',
   des: 'cool',
-  courseProvider: 'udemy',
-})*/
+  courseProvider: 'edx',
+})
 
 module.exports = {
   createCourse,
