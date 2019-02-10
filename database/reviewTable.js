@@ -37,7 +37,6 @@ async function getReviews(courseId) {
   return result;
 }
 
-/*
 createReview({
   userId: 1,
   courseId: 1,
@@ -46,7 +45,6 @@ createReview({
   text: "good",
   date: new Date(),
 })
-*/
 
 
 module.exports = {
