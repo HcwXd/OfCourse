@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OfCourse - Publish</title>
+
+    <link rel="stylesheet" href="/publish/css/style.css" />
+    <link rel="stylesheet" href="/nav/css/style.css" />
+  </head>
+
+  <body>
+      <%- include('components/nav') %>
+    <div class="course_wrap">
+      URL: <input class="url"></input> 
+      <button type="button">Enter</button></br>
+      <div class="course_info_wrap">
+        Class Name:<input class="class_name"></input></br> 
+        Category: <input class="category"></input></br>
+        Duration: <input class="duration"></input>
+        Language: <input class="language"></input>
+        Level: <input class="level"></input>
+      </div>
+      <div class="class_avatar"></div>
+    </div>
+    <div class="review_info_wrap">
+      <div class="user_wrap">
+        <img
+          class="user_avatar"
+          src="https://lareviewofbooks-org-cgwbfgl6lklqqj3f4t3.netdna-ssl.com/wp-content/uploads/2016/08/bojack-horseman-season-3-trailer.jpg"
+        />
+        <div class="user_text_wrap">
+          <div class="user_name">Horseman Bojack, 34 Reviews</div>
+          <div class="star">☆☆☆☆☆</div>
+        </div>
+      </div>
+      <textarea type="text" class="review"></textarea>
+      <div class="button_wrap">
+        <button type="button">Cancel</button>
+        <button type="button">Submit</button>
+      </div>
+    </div>
+    <script src="/publish/js/index.js"></script>
+  </body>
+</html>
