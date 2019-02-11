@@ -63,11 +63,18 @@ fetch(reviewsInfoUrl, {
         document.querySelector('.review_list').appendChild(review_item_node);
       }
     );
-    document.querySelector('.review_summary_avg_score').innerHTML = scoreSum / response.length;
+    document.querySelector('.review_summary_avg_score').innerHTML = (
+      scoreSum / response.length
+    ).toFixed(2);
     document.querySelector('.review_summary_total_count').innerHTML = '(' + response.length + ')';
-    document.querySelector("[data-score='1']").style.width = scoreCnt[1] / response.length;
-    document.querySelector("[data-score='2']").style.width = scoreCnt[2] / response.length;
-    document.querySelector("[data-score='3']").style.width = scoreCnt[3] / response.length;
-    document.querySelector("[data-score='4']").style.width = scoreCnt[4] / response.length;
-    document.querySelector("[data-score='5']").style.width = scoreCnt[5] / response.length;
+    document.querySelector("[data-score='1']").style.width = `${(scoreCnt[1] / response.length) *
+      100}%`;
+    document.querySelector("[data-score='2']").style.width = `${(scoreCnt[2] / response.length) *
+      100}%`;
+    document.querySelector("[data-score='3']").style.width = `${(scoreCnt[3] / response.length) *
+      100}%`;
+    document.querySelector("[data-score='4']").style.width = `${(scoreCnt[4] / response.length) *
+      100}%`;
+    document.querySelector("[data-score='5']").style.width = `${(scoreCnt[5] / response.length) *
+      100}%`;
   });
